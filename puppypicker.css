@@ -41,7 +41,7 @@ dt{
     text-align: center; 
 }
 
-button{
+.bigBtn{
     background-color: antiquewhite;
     color: black;
     padding: 15px 30px;
@@ -49,6 +49,16 @@ button{
     border: 2px solid teal;
     border-radius: 6px;
     font-size: 20px;
+}
+
+button{
+    background-color: antiquewhite;
+    color: black;
+    padding: 8px 16px;
+    display: inline-block;
+    border: 2px solid teal;
+    border-radius: 6px;
+    font-size: 10px;
 }
 
 select{
@@ -108,11 +118,11 @@ input[type=button]:hover{
 .btn {
     background-color: antiquewhite;
     color: black;
-    padding: 15px 30px;
+    padding: 10px 20px;
     display: inline-block;
     border: 2px solid teal;
     border-radius: 6px;
-    font-size: 20px;
+    font-size: 13px;
     cursor: pointer;
 }
 
