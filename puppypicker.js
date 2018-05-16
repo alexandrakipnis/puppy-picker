@@ -1,5 +1,5 @@
 const form = document.querySelector('form#addPuppy')
-const desireLevel = ['Want', 'Really Want', 'Need', 'Cannot Live Without']
+//const desireLevel = ['Want', 'Really Want', 'Need', 'Cannot Live Without']
 
 let puppyArray = new Array()
 
@@ -24,8 +24,14 @@ const renderListItem = function(label, value){
 const handleDelete = function(ev){
     ev.preventDefault()
     const listItem = ev.target
+
+    for(var i = 0; i < puppyArray.length; i++){
+        if(`Puppy${puppyArray[i].Puppy}Desire${puppyArray[i].Desire}Delete` == listItem.parentNode.textContent){
+            puppyArray.splice(i, 1)
+            break
+        }
+    }
     listItem.parentNode.remove()
-    puppyArray.splice(puppyArray.indexOf(listItem), 1)
 }
 
 const renderList = function(data){
@@ -47,13 +53,12 @@ const handleSubmit = function(ev){
     const puppies = document.querySelector('#puppies')
 
     const puppy = {
-        'Puppy: ': form.puppyType.value,
-        'Desire: ': form.desireLevel.value
+        'Puppy': form.puppyType.value,
+        'Desire': form.desireLevel.value
     }
-    
 
     puppies.appendChild(renderList(puppy))
-    puppyArray.push(renderList(puppy))
+    puppyArray.push(puppy)
 
     form.reset()
     form.puppyType.focus()
