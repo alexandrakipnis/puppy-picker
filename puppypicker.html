@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Puppy Picker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="puppypicker.css" />
+</head>
+<body>
+    <h1 id="header">Puppy Picker: Your guide to prioritizing which puppy to get first.</h1>
+
+    <form id="userForm">
+        <p>
+            <label for="puppyType"> Puppy: </label>
+            <input type="text" name="puppyType" placeHolder="Enter a puppy type..." autofocus>
+        </p>
+
+        <label for="desire"> How Badly Do You Want This Puppy: </label>
+        <select name="desireLevel">
+            <option value="" disabled selected>Select your option</option>
+            <option value="want">Want</option>
+            <option value="reallyWant">Really Want</option>
+            <option value="need">Need</option>
+            <option value="cantLiveWithout">Can't Live Without</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">Add Puppy</button>
+        <button type="reset">Clear Input</button>
+        <input type="button" value="Clear List" onClick="window.location.reload()">
+
+
+    </form>
+    
+</body>
+</html>
