@@ -10,28 +10,43 @@
 <body>
     <h1 id="header">Puppy Picker: Your guide to prioritizing which puppy to get first.</h1>
 
-    <form id="userForm">
+    <form id="addPuppy">
         <p>
-            <label for="puppyType"> Puppy: </label>
+            <label for="puppyType"> Puppy:  </label>
             <input type="text" name="puppyType" placeHolder="Enter a puppy type..." autofocus>
         </p>
 
-        <label for="desire"> How Badly Do You Want This Puppy: </label>
+        <label for="desire"> How Badly Do You Want This Puppy:  </label>
         <select name="desireLevel">
             <option value="" disabled selected>Select your option</option>
             <option value="Want">Want</option>
             <option value="Really Want">Really Want</option>
             <option value="Need">Need</option>
-            <option value="Can't Live Without">Can't Live Without</option>
+            <option value="Cannot Live Without">Cannot Live Without</option>
         </select>
 
         <br><br>
 
-        <button type="submit">Add Puppy</button>
+        <button type="submit" id="add">Add Puppy</button>
         <button type="reset">Clear Input</button>
         <input type="button" value="Clear List" onClick="window.location.reload()">
 
+        <br><br>
+        
+
     </form>
+
+    <br><br>
+
+    <div id="myBtnContainer">
+        <button class="btn active"> Show all</button>
+        <button class="btn"> Want</button>
+        <button class="btn"> Really Want</button>
+        <button class="btn"> Need</button>
+        <button class="btn"> Cannot Live Without</button>
+    </div>
+
+    <div class="sortedPuppies" id="sortedPuppies"></div>
     
     <div class="puppies" id="puppies"></div>
 
