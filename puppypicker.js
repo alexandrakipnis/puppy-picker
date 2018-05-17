@@ -68,16 +68,13 @@ const displayList = function(item){
     const desire = document.querySelector(`#${item.Desire}`)
 
     const list = document.createElement('dl')
-    const button = document.createElement('button')
+    /*const button = document.createElement('button')
     button.addEventListener('click', handleDelete)
-    button.textContent = 'Delete'
+    button.textContent = 'Delete'*/
 
-    Object.keys(item).map(function(label){
-        const newItem = renderListItem(item[label])
-        list.appendChild(newItem)
-        list.appendChild(button)
-    })
-
+    
+    list.appendChild(renderListItem(item.Puppy))
+    
     desire.appendChild(list)
 }
 

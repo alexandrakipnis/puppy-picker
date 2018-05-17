@@ -1,12 +1,15 @@
 
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 
 body{
-    font-family: Quicksand, sans-serif;
+    font-family: Raleway, sans-serif;
     text-align: center;
     font-size: 15pt;
     background-color: powderblue;
+    background-image: url('dogwallpaper.gif');
     margin-left: 10px;
+    color: teal;
+    font-weight: bold;
     
 }
 
@@ -89,12 +92,9 @@ input[type=text]{
     
 }
 
-
 input[type=text]:focus{
     background-color: antiquewhite;
 }
-
-
 
 input[type=color]{
     border: 2px solid teal;
