@@ -41,6 +41,16 @@ dt{
     text-align: center; 
 }
 
+dl{
+    display: inline-block;
+    clear: left;
+    margin-right: 5px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;  
+}
+
 .bigBtn{
     background-color: antiquewhite;
     color: black;
@@ -115,23 +125,6 @@ input[type=button]:hover{
     display: block;
 }
 
-.btn {
-    background-color: antiquewhite;
-    color: black;
-    padding: 10px 20px;
-    display: inline-block;
-    border: 2px solid teal;
-    border-radius: 6px;
-    font-size: 13px;
-    cursor: pointer;
-}
-
-.btn.active {
-    background-color: teal;
-    color: white;
-}
-
-.btn:hover {
-    background-color: teal;
-    color: white;
+.btn{
+    
 }

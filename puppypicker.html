@@ -19,10 +19,10 @@
         <label for="desire"> How Badly Do You Want This Puppy:  </label>
         <select name="desireLevel">
             <option value="" disabled selected>Select your option</option>
+            <option value="Eh">Eh</option>
             <option value="Want">Want</option>
-            <option value="Really Want">Really Want</option>
             <option value="Need">Need</option>
-            <option value="Cannot Live Without">Cannot Live Without</option>
+            <option value="Urgent">Urgent</option>
         </select>
 
         <br><br>
@@ -38,18 +38,32 @@
 
     <br><br>
 
-    <div id="myBtnContainer">
-        <button class="btn active"> Show all</button>
-        <button class="btn"> Want</button>
-        <button class="btn"> Really Want</button>
-        <button class="btn"> Need</button>
-        <button class="btn"> Cannot Live Without</button>
+    <div class="myBtnContainer">
+        <button class="container" onclick="handleChoiceButtons('Eh')" >Eh</button>
+        <button class="container" onclick="handleChoiceButtons('Want')" >Want</button>
+        <button class="container" onclick="handleChoiceButtons('Need')" >Need</button>
+        <button class="container" onclick="handleChoiceButtons('Urgent')" >Urgent</button>
     </div>
 
     <br><br>
 
-    <div class="sortedPuppies" id="sortedPuppies"></div>
+    <div id="Eh" style="display:none" class="btn">
+        <h3>Eh</h3>
+    </div>
+
+    <div id="Want" style="display:none" class="btn">
+        <h3>Want</h3>
+    </div>
+
+    <div id="Need" style="display:none" class="btn">
+        <h3>Need</h3>
+    </div>
+
+    <div id="Urgent" style="display:none" class="btn">
+        <h3>Urgent</h3>
+    </div>
     
+    <h2>All Puppies</h2>
     <div class="puppies" id="puppies"></div>
 
     <script src="puppypicker.js"></script>

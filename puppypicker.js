@@ -1,6 +1,4 @@
 const form = document.querySelector('form#addPuppy')
-//const desireLevel = ['Want', 'Really Want', 'Need', 'Cannot Live Without']
-
 let puppyArray = new Array()
 
 const renderListItem = function(value){
@@ -57,16 +55,47 @@ const handleSubmit = function(ev){
         'Desire': form.desireLevel.value
     }
 
+    displayList(puppy)
     puppies.appendChild(renderList(puppy))
     puppyArray.push(puppy)
 
+    
     form.reset()
     form.puppyType.focus()
 }
 
+const displayList = function(item){
+    const desire = document.querySelector(`#${item.Desire}`)
+
+    const list = document.createElement('dl')
+    const button = document.createElement('button')
+    button.addEventListener('click', handleDelete)
+    button.textContent = 'Delete'
+
+    Object.keys(item).map(function(label){
+        const newItem = renderListItem(item[label])
+        list.appendChild(newItem)
+        list.appendChild(button)
+    })
+
+    desire.appendChild(list)
+}
+
+const handleChoiceButtons = function(type){
+    let btnContainer = document.getElementsByClassName('btn')
+    for(var i = 0; i < btnContainer.length; i++){
+        btnContainer[i].style.display = "none"
+    }
+    document.getElementById(type).style.display = "block"
+}
+
+
 form.addEventListener('submit', handleSubmit)
 
-const handleDisplayChoice = function(){
+
+
+/*const handleDisplayChoice = function(){
+    debugger
     const current = document.getElementsByClassName("active")
     current[0].className = current[0].className.replace(" active", "")
     this.className += " active";
@@ -77,5 +106,5 @@ const buttonContainer = document.getElementById('myBtnContainer')
 const buttons = buttonContainer.getElementsByClassName('btn')
 for(var i = 0; i < buttons.length; i++){
     buttons[i].addEventListener("click", handleDisplayChoice)  
-}
+}*/
 
