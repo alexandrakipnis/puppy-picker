@@ -68,11 +68,10 @@ const displayList = function(item){
     const desire = document.querySelector(`#${item.Desire}`)
 
     const list = document.createElement('dl')
-    /*const button = document.createElement('button')
+    const button = document.createElement('button')
     button.addEventListener('click', handleDelete)
-    button.textContent = 'Delete'*/
+    button.textContent = 'Delete'
 
-    
     list.appendChild(renderListItem(item.Puppy))
     
     desire.appendChild(list)
@@ -88,20 +87,4 @@ const handleChoiceButtons = function(type){
 
 
 form.addEventListener('submit', handleSubmit)
-
-
-
-/*const handleDisplayChoice = function(){
-    debugger
-    const current = document.getElementsByClassName("active")
-    current[0].className = current[0].className.replace(" active", "")
-    this.className += " active";
-}
-
-//change which button is active
-const buttonContainer = document.getElementById('myBtnContainer')
-const buttons = buttonContainer.getElementsByClassName('btn')
-for(var i = 0; i < buttons.length; i++){
-    buttons[i].addEventListener("click", handleDisplayChoice)  
-}*/
 
