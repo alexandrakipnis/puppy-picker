@@ -57,10 +57,15 @@ const handleSubmit = function(ev){
     }
 
     displayList(puppy)
-    puppies.appendChild(renderList(puppy))
+
+    try{
+        puppies.appendChild(renderList(puppy))
+    }catch(e){
+        const another = document.createElement('li') 
+        another.textContent += puppy
+    }
     puppyArray.push(puppy)
 
-    
     form.reset()
     form.puppyType.focus()
 }
@@ -72,8 +77,6 @@ const displayList = function(item){
     const button = document.createElement('button')
     button.addEventListener('click', handleDelete)
     button.textContent = 'Delete'
-
-    
 
     list.appendChild(renderListItem(item.Puppy))
     list.appendChild(button)
