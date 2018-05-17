@@ -36,6 +36,7 @@ const renderList = function(data){
     const list = document.createElement('ul')
     const button = document.createElement('button')
     button.addEventListener('click', handleDelete)
+
     button.textContent = 'Delete'
     Object.keys(data).map(function(label) {
         list.appendChild(renderListItem(data[label]))
@@ -72,7 +73,10 @@ const displayList = function(item){
     button.addEventListener('click', handleDelete)
     button.textContent = 'Delete'
 
+    
+
     list.appendChild(renderListItem(item.Puppy))
+    list.appendChild(button)
     
     desire.appendChild(list)
 }
